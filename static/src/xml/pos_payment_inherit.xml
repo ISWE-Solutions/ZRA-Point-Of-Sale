@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+        <t t-name="pos_button.PaymentScreenButtons"
+
+           t-inherit="point_of_sale.PaymentScreenButtons"
+
+           t-inherit-mode="extension">
+
+        <xpath expr="//div[hasclass('payment-buttons')]" position="inside">
+
+            <button class="button js_invoice btn py-3 text-start rounded-0 border-bottom"
+                    t-att-class="{'btn-primary': smartInvoiceEnabled, 'btn-light': !smartInvoiceEnabled}"
+                    t-on-click="smart_invoice">
+            <i class="fa fa-file-text-o me-2"/>Smart Invoice
+            </button>
+
+        </xpath>
+       </t>
+</templates>

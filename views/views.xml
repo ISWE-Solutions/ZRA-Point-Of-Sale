@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="zra_pos.list">
+      <field name="name">zra_pos list</field>
+      <field name="model">zra_pos.zra_pos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="zra_pos.action_window">
+      <field name="name">zra_pos window</field>
+      <field name="res_model">zra_pos.zra_pos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="zra_pos.action_server">
+      <field name="name">zra_pos server</field>
+      <field name="model_id" ref="model_zra_pos_zra_pos"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="zra_pos" id="zra_pos.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="zra_pos.menu_1" parent="zra_pos.menu_root"/>
+    <menuitem name="Menu 2" id="zra_pos.menu_2" parent="zra_pos.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="zra_pos.menu_1_list" parent="zra_pos.menu_1"
+              action="zra_pos.action_window"/>
+    <menuitem name="Server to list" id="zra_pos" parent="zra_pos.menu_2"
+              action="zra_pos.action_server"/>
+-->
+  </data>
+</odoo>
